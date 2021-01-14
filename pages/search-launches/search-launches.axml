@@ -1,0 +1,21 @@
+<view class="container" a:if="{{launches}}">
+    <form onSubmit="search">
+        <checkbox-group>
+          <label class="checkbox" name="upcoming">
+            <checkbox value="upcoming" checked="{{filter.query.upcoming}}" />
+            <text class="checkbox-text">Upcoming?</text>
+        </label>
+        </checkbox-group>
+        <button formType="submit">Submit</button>
+    </form>
+    <block a:for="{{launches}}" a:for-index="i" a:for-item="item">
+        <view key="launch-{{i}}" class="custom-card">
+            <view class="font-weight-bold mb-3">
+                {{item.date}}
+            </view>
+            <view>
+                {{item.description}}
+            </view>
+        </view>
+    </block>
+</view>

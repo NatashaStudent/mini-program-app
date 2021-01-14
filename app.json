@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search-launches/search-launches",
+    "pages/tracked-launches/tracked-launches"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

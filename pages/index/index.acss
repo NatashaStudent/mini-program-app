@@ -1,0 +1,19 @@
+.index {
+    margin: 10px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    background: #661fff;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+}

@@ -1,0 +1,41 @@
+@import "./css/_utilities.acss";
+@import './css/_flexboxgrid.acss';
+
+page {
+    flex: 1;
+    display: flex;
+    background: #f7f7f7;
+    color: #333;
+    font-family: sans-serif;
+}
+
+/* 
+
+{
+  "Primary": {
+    "50": "#f4ffe9",
+    "100": "#e4ffc8",
+    "200": "#d1ffa2",
+    "300": "#bfff79",
+    "400": "#b2ff59",
+    "500": "#a3fc33",
+    "600": "#9cea2a",
+    "700": "#90d318",
+    "800": "#85ba00",
+    "900": "#739200"
+  },
+  "Secondary": {
+    "50": "#f0e7ff",
+    "100": "#d7c3fe",
+    "200": "#bb9bff",
+    "300": "#9e6fff",
+    "400": "#844aff",
+    "500": "#661fff",
+    "600": "#581af8",
+    "700": "#400ef0",
+    "800": "#1f02eb",
+    "900": "#0000e7"
+  }
+}
+
+*/

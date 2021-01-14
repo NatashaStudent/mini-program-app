@@ -1,0 +1,6 @@
+<view class="index">
+  <view class="row">
+      <navigator class="btn mr-1" url="/pages/search-launches/search-launches" open-type="navigate">Search Launches</navigator>
+      <navigator class="btn ml-1" url="/pages/tracked-launches/tracked-launches" open-type="navigate">Tracked Launches</navigator>
+  </view>
+</view>
