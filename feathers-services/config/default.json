@@ -6,5 +6,16 @@
     "default": 10,
     "max": 50
   },
-  "postgres": "postgres://postgres:@localhost:5432/feathers_services"
+  "postgres": {
+    "username": "vodasureapi",
+    "password": "Ip4v5@nP.",
+    "host": "vodasure-instance-1.cwgtrwe8bohh.eu-west-1.rds.amazonaws.com",
+    "port": "5432",
+    "database": "Vodasure",
+    "schema": "config",
+    "wisdomSchema": "wisdom",
+    "commsSchema": "comms",
+    "coreSchema": "core",
+    "templateSchema": "template"
+  }
 }
