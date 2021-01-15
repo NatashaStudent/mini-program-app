@@ -18,10 +18,10 @@
                 {{item.description}}
             </view>
             <view>
-                <checkbox-group onChange="handleTrack" data-id="{{item}}">
+                <checkbox-group onChange="handleTrack" data-id="{{item}}" class="p-2">
                     <label class="checkbox" name="track-launch-{{i}}">
-                        <checkbox value="upcoming" checked="{{filter.query.upcoming}}" name="upcoming" />
-                        <text class="checkbox-text">track</text>
+                        <checkbox value="upcoming" checked="{{item.checked}}" name="upcoming" />
+                        <text class="checkbox-text">Track</text>
                     </label>
                 </checkbox-group>
             </view>

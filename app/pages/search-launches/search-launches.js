@@ -19,18 +19,26 @@ Page({
         }
     },
     filterLaunches() {
-        SpaceXCore.filterLaunches(this.data.filter, (results) => {
-            TrackingService.getTrackedLaunches((trackedLaunches) => {});
-            this.setData({
-                launches: results.docs.map((item) => {
-                    return {
-                        date: moment(item.date_utc).format(
-                            "MMMM Do YYYY, h:mm:ss a"
-                        ),
-                        launch_id: item.id,
-                        description: item.details,
-                    };
-                }),
+        SpaceXCore.filterLaunches(this.data.filter, results => {
+            TrackingService.getTrackedLaunches(trackedLaunches => {
+                this.setData({
+                    launches: results.docs.map(item => {
+                        let existing = trackedLaunches.data.find(
+                            trackedLaunch => {
+                                return item.id == trackedLaunch.launch_id;
+                            }
+                        );
+
+                        return {
+                            date: moment(item.date_utc).format(
+                                "MMMM Do YYYY, h:mm:ss a"
+                            ),
+                            launch_id: item.id,
+                            description: item.details,
+                            checked: existing !== null && existing !== undefined
+                        };
+                    })
+                });
             });
         });
     },
@@ -38,22 +46,22 @@ Page({
         launches: [],
         filter: {
             query: {
-                upcoming: false,
+                upcoming: false
             },
             options: {
                 limit: 5,
                 sort: {
-                    date_utc: "desc",
-                },
-            },
-        },
+                    date_utc: "desc"
+                }
+            }
+        }
     },
     onShareAppMessage() {
         // Back to custom sharing information
         return {
             title: "Search Launches",
             desc: "Search and View Launches",
-            path: "pages/search-launches/search-launches",
+            path: "pages/search-launches/search-launches"
         };
-    },
+    }
 });
