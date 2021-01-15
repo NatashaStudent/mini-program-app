@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@feathersjs/feathers": "^4.5.11",
     "mini-antui": "^0.4.35",
     "moment": "^2.29.1"
   }

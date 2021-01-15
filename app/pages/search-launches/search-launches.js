@@ -8,6 +8,16 @@ Page({
     search(e) {
         console.log(e);
     },
+    handleCheck(e) {
+         this.setData({
+                filter: {
+                    query: {
+                         upcoming: true
+                        },
+                },
+        });
+        console.log(this.data);
+    },
     filterLaunches() {
         SpaceXCore.filterLaunches(this.data.filter, results => {
             this.setData({
